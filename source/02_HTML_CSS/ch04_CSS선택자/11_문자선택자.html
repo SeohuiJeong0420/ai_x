@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        #wrap{
+            width:750px; margin:0 auto;
+        }
+        #header{
+            text-align:center;
+        }
+        #content{
+            border-top: 1px solid lightgray;
+            border-bottom: 1px solid lightgray;
+            text-align:justify;
+        }
+        #content p:nth-child(2):first-line,
+        #content p:nth-child(3):first-line{
+            font-weight:bold;/*글자 진하게*/
+            color:blue:/*글자색*/
+        }
+        #content p:nth-child(2):first-letter,
+        #content p:last-child:first-letter{
+            font-size:2.5em; /*글자크기를 2.5배*/
+        }
+        #footer ul{overflow:hidden;} /*부모단*/
+        #footer ul li{
+            float:left;/*수평 띄우기*/
+            list-style:none;
+            padding:15px
+        }
+        #footer ul li:first-child{
+            padding-top : 30px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <h1>제목이나 회사명</h1>
+        </div>
+        <div id="content">
+            <p>오후에 기온 오름. 덥다</p>
+            <p>
+                모든 국민은 자기의 행위가 아닌 친족의 행위로 인하여 불이익한 처우를 받지 아니한다. 국가는 농지에 관하여 경자유전의 원칙이 달성될 수 있도록 노력하여야 하며, 농지의 소작제도는 금지된다.
+            </p>
+            <p>
+                대통령은 국무총리·국무위원·행정각부의 장 기타 법률이 정하는 공사의 직을 겸할 수 없다. 국정의 중요한 사항에 관한 대통령의 자문에 응하기 위하여 국가원로로 구성되는 국가원로자문회의를 둘 수 있다.
+            </p>
+        </div>
+        <div id="footer">
+            <ul>
+                <li><img src="ch04/logo.png" alt=고용부 로고/></li>
+                <li><img src="ch04/address.png" alt="주소"/></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        * { /*전체선택자 == 페이지 전체 태그 : 페이지 초기화*/
+            margin: 0; /*밖여백(위, 우, 하, 좌)*/
+            padding: 0; /*안여백(위, 우, 하, 좌)*/
+            color:saddlebrown; /*글자색*/
+        }
+        header, nav, section, footer{
+            width:500px; /*가로 사이즈(width를 지정하지 않으면 block형태그는 부모 width를 따름)*/
+            border:1px solid gray;
+            margin:2px auto
+        }
+        nav ul { /*수평으로 하고픈 태그의 부모*/
+            overflow:hidden;
+        }
+        nav ul li { /*수평으로 할 태그*/
+            float: left;
+            list-style: none;
+            /*border: 1px solid red;
+            margin: 10px 25px*/
+            width: 123px;
+            text-align:center;
+            margin: 10px 0;
+        }
+        section{ /*수평 속성을 지우고 싶을 태그*/
+            clear:both
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>00 주식회사</h1>
+    </header>
+    <nav>
+        <ul>
+            <li>회사소개</li>
+            <li>서비스소개</li>
+            <li>고객센터</li>
+            <li>공지사항</li>
+        </ul>
+    </nav>
+    <section>
+        <p>
+            국가안전보장에 관련되는 대외정책·군사정책과 국내정책의 수립에 관하여 국무회의의 심의에 앞서 대통령의 자문에 응하기 위하여 국가안전보장회의를 둔다.
+        </p>
+    </section>
+    <footer>
+        <p>서울시 땡땡구 뭐뭐로 99 무슨빌딩 901호</p>
+    </footer>
+</body>
+</html>
