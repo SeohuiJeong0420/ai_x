@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        #wrap{
+            width:600px; margin:0 auto;
+            border:1px solid gray;
+            text-align:justify;
+            padding:10px;
+        }
+        #wrap p:nth-child(2n){background-color:lightblue;}
+        /* 
+            em(원 글씨크기의 몇배), %(글씨크기 및 width, height,..,px, pt(3pt가 4px) 
+            pxtoem(https://pxtoem.com.au/)
+            pxtopt(https://univer.ai/typedoc/@univerjs/engine-render/functions/pxToPt)
+        */
+        #wrap p > span{
+            display:block;/*display속성을 block으로 수정하면 block형 태그로 전환*/
+            color:gray;
+            font-size:.5em;
+        }
+        #wrap p:nth-child(1){
+            font-size:.8em; /*원래 사이즈의 0.8배*/
+        }
+        #wrap p:nth-child(2){
+            font-size: 100%; /*문자의 경우 원래 사이즈의 몇 %*/
+            /*width, height, padding, margin..등 길이의 경우 : 부모길이의 몇 % */
+        }
+        #wrap p:nth-child(3){
+            font-size:32px; /*p태그 기본 사이즈가 16px*/
+        }
+        #wrap p:nth-child(4){
+            font-size:24pt; /* 3pt(글씨 포인트 단위)가 4px */
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <p>
+            농업생산성의 제고와 농지의 합리적인 이용을 위하거나 불가피한 사정으로 발생하는 농지의 임대차와 위탁경영은 법률이 정하는 바에 의하여 인정된다.
+            <span>입력 2025.05.14 오전9:46</span>
+        </p>
+        <p>
+            농업생산성의 제고와 농지의 합리적인 이용을 위하거나 불가피한 사정으로 발생하는 농지의 임대차와 위탁경영은 법률이 정하는 바에 의하여 인정된다.
+            <span>입력 2025.05.14 오전9:46</span>
+        </p>
+        <p>
+            농업생산성의 제고와 농지의 합리적인 이용을 위하거나 불가피한 사정으로 발생하는 농지의 임대차와 위탁경영은 법률이 정하는 바에 의하여 인정된다.
+            <span>입력 2025.05.14 오전9:46</span>
+        </p>
+        <p>
+            농업생산성의 제고와 농지의 합리적인 이용을 위하거나 불가피한 사정으로 발생하는 농지의 임대차와 위탁경영은 법률이 정하는 바에 의하여 인정된다.
+            <span>입력 2025.05.14 오전9:46</span>
+        </p>
+    </div>
+</body>
+</html>
