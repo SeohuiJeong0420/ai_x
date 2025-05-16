@@ -1,0 +1,85 @@
+﻿/* css/header.css : 페이지 초기화, header부분 */
+/*페이지 초기화*/
+@font-face {
+    font-family: 'Merriweather-Light';
+    src: url('../font/Merriweather-Light.ttf');
+}
+@font-face {
+    font-family: 'Merriweather-Regular';
+    src: url('../font/Merriweather-Regular.ttf');
+}
+*{margin:0; padding:0; font-family:'Merriweather-Regular';}
+a{
+    text-decoration:none;
+    color:black;
+    display:block; /*a태그를 block타입으로 하여 영역 확장*/
+}
+li{
+    list-style:none;
+}
+
+/*** header 부분***/
+/*** header.gnb 부분***/
+header .gnb{ 
+    min-width:1000px;
+    background-color:black; 
+    overflow:hidden;
+}
+header .gnb a{color:white;}
+header .gnb ul{
+    width:1000px; margin:0 auto;
+}
+    header .gnb ul li {
+        float: left;
+        width: 8%;
+        margin: 0 1%;
+        text-align: center;
+        line-height: 30px;
+    }
+/*** header.logo 부분***/
+header .logo {
+    width: 100px;
+    margin: 30px auto;
+    border: 1px solid gray;
+    text-align: center;
+    font-size: 2em;
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    padding: 15px 30px; /*안여백*/
+}
+
+/*** header.hitmenu 부분***/
+
+header .hitmenu ul{
+    width:1000px; margin:0 auto 3px;
+    overflow:hidden;
+}
+header .hitmenu ul li{
+    float:right;
+    border:1px solid gray;
+}
+header .hitmenu ul li a{
+    padding:10px 30px;
+}
+header .hitmenu ul li:first-child{
+    border-radius:0 10px 10px 0;
+}
+header .hitmenu ul li:last-child {
+    border-radius: 10px 0 0 10px;
+}
+/*** header.lnb 부분***/
+header .lnb {
+    min-width: 1000px;
+    border-top: 1px dashed black;
+    border-bottom: 1px dashed black;
+}
+header .lnb ul {
+    width: 1000px; margin:0 auto;
+    overflow:hidden;
+}
+header .lnb ul li{
+    float:left;
+    line-height:30px;
+    width:10.5%; margin:0 1%;
+    text-align:center;
+}
