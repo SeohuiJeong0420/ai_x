@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <title></title>
+    <style>
+        
+    </style>
+    <script>
+        var result = confirm('누적할래?')
+        let cnt = 0;//입력횟수
+        let right = 0;//유효한 점수를 입력한 횟수
+        let wrong = 0;//유효하지 않은 점수를 입력한 횟수
+        let sum = 0;//점수 누적
+        while(result){
+            cnt++;
+            var su = prompt('입력할 수','0');
+            score = Number(su);
+            if(su|| su.trim()&& !isNan(score) &&score>=0 && score<=100){
+                sum += score;
+                right++;
+            }else{
+                wrong++;
+            }
+            result = confirm('계속 누적할래?')
+        }
+        //횟수들과 누적점수 출력
+        document.write(cnt+'번 입력<br>');
+        document.write('누적점수: '+sum+'<br>');
+        document.write('점수를 제대로 입력한 횟수: '+right+'<br>');
+        document.write('점수를 잘못 입력한 횟수: '+wrong+'<br>');
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
