@@ -1,3 +1,4 @@
 download/
 lecNote/
 __pycache__
+.env
