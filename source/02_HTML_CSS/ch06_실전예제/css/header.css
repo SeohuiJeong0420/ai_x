@@ -20,10 +20,10 @@ li{
 
 /*** header 부분***/
 /*** header.gnb 부분***/
-header .gnb{ 
-    min-width:1000px;
-    background-color:black; 
-    overflow:hidden;
+header .gnb {
+    min-width: 1000px;
+    background-color: black;
+    overflow: hidden;
 }
 header .gnb a{color:white;}
 header .gnb ul{
