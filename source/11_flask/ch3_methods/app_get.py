@@ -11,7 +11,7 @@ from flask import abort # 강제로 예외발생
 from models import Member
 from filters import mask_password
 
-app = Flask(__name__)
+app = Flask(__name__) # 앱 객체 생성
 
 # 필터링 추가 (str -> str문자갯수만큼 *)
 app.template_filter("mask_pw")(mask_password)
