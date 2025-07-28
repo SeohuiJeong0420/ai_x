@@ -14,7 +14,7 @@
   <img src="https://img.shields.io/badge/DeeepLearning(tensorflow)-ff00ff?style=for-the-badge&logo=DeeepLearning&logoColor=black">
   <img src="https://img.shields.io/badge/MachineLearning(sklearn)-55ff55?style=for-the-badge&logo=MachineLearning&logoColor=white">
   <img src="https://img.shields.io/badge/LLM-55ff55?style=for-the-badge&logo=LLM&logoColor=white">
-  <img src="https://img.shields.io/badge/HuggingFaceF7DF1E?style=for-the-badge&logo=HuggingFace&logoColor=black">
+  <img src="https://img.shields.io/badge/HuggingFace-F7DF1E?style=for-the-badge&logo=HuggingFace&logoColor=black">
   <img src="https://img.shields.io/badge/Ollama-55ff55?style=for-the-badge&logo=Ollama&logoColor=white">
 </div>
 
@@ -53,3 +53,9 @@
  </div>
 
 ![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=comlec&show_icons=true&theme=radical)
+
+
+
+
+
+
