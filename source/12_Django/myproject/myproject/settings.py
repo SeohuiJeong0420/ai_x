@@ -33,7 +33,7 @@ SECRET_KEY = config('SECRET_KEY', 'secretkey')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = config('ALLOWED_HOST', default="*").split(",")
 
 
 # Application definition
@@ -47,10 +47,10 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "django_extensions", # 추가 앱 등록(django 5.2부터는 shell에도 model 자동 import)
     "blog",
-    "accounts",
     "book",
     "django.contrib.humanize", # intcomma(세자리마다 ,) 필터 사용
     "article", # GenericView이용(paging처리), 파일첨부(ch08)
+    "accounts",
 ]
 
 MIDDLEWARE = [
@@ -105,6 +105,9 @@ AUTH_PASSWORD_VALIDATORS = [
     },
     {
         "NAME": "django.contrib.auth.password_validation.MinimumLengthValidator",
+        "OPTIONS": {
+            "min_length": 2,
+        },
     },
     {
         "NAME": "django.contrib.auth.password_validation.CommonPasswordValidator",
@@ -118,7 +121,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.2/topics/i18n/
 
-LANGUAGE_CODE = "en-us"
+LANGUAGE_CODE = "ko-kr"
 
 TIME_ZONE = "UTC"
 
@@ -135,7 +138,7 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'myproject', 'static'),
 ]
 #운영 환경 python manage.py collectstatic 실행(pt. 10)
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, '_staticfiles')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
@@ -145,5 +148,15 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # media파일의 url prefix /media/article/noImg.png
 MEDIA_URL = "/media/"
-#업로드한 파일이 저장될 폴더 -> 이미지 파일 지원 라이브러리 pip install pillow
+#업로드한 파일이 저장될 폴더 -> 이미지 파일 지원 라이브러리 pip install pillow->pip freeze > requirements.txt
 MEDIA_ROOT = os.path.join(BASE_DIR, "_media")
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST ='smtp.gmail.com'
+EMAIL_PORT=465
+EMAIL_HOST_USER = config('MAIL_HOST_USER')
+EMAIL_HOST_PASSWORD=config('MAIL_POST_PASSWORD')
+EMAIL_USE_SSL=True
+# EMAIL_USE_TLS=FALSE
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
